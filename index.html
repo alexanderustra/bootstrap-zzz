@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Tu Página</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Título</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Opción 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Opción 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Opción 3</a>
+                </li>
+                <li class="nav-item dropdown d-lg-none">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Menú
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Botón 1</a>
+                        <a class="dropdown-item" href="#">Botón 2</a>
+                        <a class="dropdown-item" href="#">Botón 3</a>
+                        <a class="dropdown-item" href="#">Botón 4</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+            </form>
+        </div>
+    </nav>
+
+    <div class="container mt-4 text-center" style="max-width: 100%;">
+        <div class="row w-100 " >
+            <div class="col-lg-8 m-auto">
+                <h1>Título Principal</h1>
+                <div id="subtitulo-carousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h2>Subtítulo 1</h2>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>Subtítulo 2</h2>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>Subtítulo 3</h2>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    var subtituloIndex = 0;
+                    var subtitulos = ["Subtítulo 1", "Subtítulo 2", "Subtítulo 3"];
+                    var subtituloElement = document.getElementById("subtitulo-carousel").querySelector(".carousel-inner");
+
+                    function cambiarSubtitulo() {
+                        subtituloIndex = (subtituloIndex + 1) % subtitulos.length;
+                        subtituloElement.children[subtituloIndex].classList.add("active");
+                        for (var i = 0; i < subtitulos.length; i++) {
+                            if (i !== subtituloIndex) {
+                                subtituloElement.children[i].classList.remove("active");
+                            }
+                        }
+                    }
+
+                    setInterval(cambiarSubtitulo, 2000);
+                </script>
+            </div>
+            <div class="d-flex w-100">
+                <div class="col-lg-4 d-block w-100 d-flex flex-wrap">
+                    <div class="btn-group d-none d-lg-block" role="group">
+                        <button type="button" class="btn btn-secondary w-100 mt-2 mb-2">Botón 1</button>
+                        <button type of="button" class="btn btn-secondary w-100 mt-2 mb-2">Botón 2</button>
+                        <button type of="button" class="btn btn-secondary w-100 mt-2 mb-2">Botón 3</button>
+                        <button type of="button" class="btn btn-secondary w-100 mt-2 mb-2">Botón 4</button>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8 flex-nowrap w-100"> <!-- Usa col-12 col-lg-8 aquí -->
+                    <p class="d-inline-block text-justify ml-2 mr-2" style="max-width: 350px;">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                    </p>
+                    <p class="d-inline-block text-justify ml-2 mr-2" style="max-width: 350px;">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                        </p>
+                        <p class="d-inline-block text-justify ml-2 mr-2" style="max-width: 350px;">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem iusto, nemo quo eum optio provident nam facere, voluptatibus voluptatum minus corporis eveniet dignissimos fugiat non soluta suscipit vero repudiandae! Dicta.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
